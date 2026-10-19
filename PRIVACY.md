@@ -1,6 +1,6 @@
 # Política de privacidade do MUSE
 
-Última atualização: 9 de outubro de 2026
+Última atualização: 19 de outubro de 2026
 
 O MUSE é um aplicativo de navegação para motociclistas que conversa com um
 painel instalado na moto. É um projeto pessoal, sem fins comerciais. Esta página
@@ -21,7 +21,12 @@ explica que dados o app usa, onde eles ficam e com quem eles são trocados.
 - Números de uso acumulados (quilômetros, tempo, recordes) e o seu ritmo de
   pilotagem, usado para estimar a hora de chegada.
 - Ajustes do app e, se você informar, a sua chave de acesso ao TomTom.
-- Mapas e alertas baixados para usar sem internet.
+- Mapas e alertas baixados para usar sem internet, e o catálogo dos monumentos
+  da Rota Biker.
+- O seu passaporte da Rota Biker, se você o preencher: a identificação (cidade,
+  estado, país, piloto, garupa e telefone), os monumentos que você marcou como
+  carimbados e, se escolher uma, a foto. **A foto fica só no celular**: não vai
+  para a nuvem nem para outro aparelho.
 - O pareamento com o painel da moto.
 
 Esses dados ficam no armazenamento do próprio app. O Android pode copiá-los para
@@ -49,7 +54,7 @@ leva seu nome, e-mail ou identificação da conta.
 | TomTom (só se você ativar com a sua própria chave) | Rotas com trânsito, busca de endereços e camada de trânsito |
 | Open-Meteo | Previsão do tempo ao longo da rota |
 | ViaCEP | Busca de endereço pelo CEP |
-| GitHub | Download dos mapas offline e das atualizações do app e do painel |
+| GitHub | Download dos mapas offline, do catálogo dos monumentos da Rota Biker e das atualizações do app e do painel |
 
 Cada serviço tem a própria política de privacidade.
 
@@ -59,7 +64,15 @@ Se você conectar uma conta Google em Ajustes > Conta, o app guarda uma cópia d
 seus dados numa **pasta escondida do seu Google Drive** (a pasta de dados do
 aplicativo), para você recuperá-los em outro celular. Vão para lá os locais e
 rotas salvas, as últimas buscas, o histórico de viagens, os números de uso, o
-ritmo de pilotagem e os ajustes, incluindo a chave do TomTom, se houver.
+ritmo de pilotagem, os ajustes, incluindo a chave do TomTom, se houver, a placa
+dos seus veículos e o passaporte da Rota Biker (a identificação e os carimbos;
+a foto não).
+
+O catálogo dos monumentos da Rota Biker é montado uma vez por dia, fora do
+app, a partir da página pública do movimento (monumentobikers.com.br) e do mapa
+público dela, e publicado no GitHub como os mapas offline. O app só baixa esse
+arquivo; ele nunca consulta o site do movimento nem o Google, e nada do que
+você faz no passaporte sai do seu celular ou da sua conta Google.
 
 - O app pede acesso **somente** a essa pasta (permissão
   `https://www.googleapis.com/auth/drive.appdata`). Ele não vê nem altera nenhum
