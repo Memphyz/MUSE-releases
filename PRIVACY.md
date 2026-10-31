@@ -47,6 +47,11 @@ usada no próprio celular e só sai dele nas consultas aos serviços descritos
 abaixo e, se você compartilhar uma viagem ou entrar num rolê em grupo, para o
 servidor do MUSE.
 
+## Microfone
+
+O app só usa o microfone nos comandos de voz, se você os ligar, e só por
+alguns segundos depois de cada chamado (veja "Comandos de voz").
+
 ## Serviços externos que o app consulta
 
 Para funcionar, o app faz consultas a serviços de mapa, rota e clima. Em cada
@@ -57,7 +62,8 @@ Nenhuma delas leva seu nome, e-mail ou identificação da conta.
 | Serviço | Para quê |
 |---|---|
 | OpenFreeMap | As imagens do mapa (a área que aparece na tela) |
-| OpenStreetMap (Nominatim e Overpass) | Busca de endereços, limites de velocidade, radares e dados das vias |
+| OpenStreetMap (Nominatim e Overpass) | Busca de endereços, limites de velocidade, radares e dados das vias; nos comandos de voz, os lugares à frente na rota (posto, borracharia, oficina) e o bairro e o lugar conhecido de onde você está |
+| Reconhecimento de voz do Android | Nos comandos de voz, entender o pedido falado. Usa o reconhecimento do próprio celular, sem internet, quando ele tem o idioma; senão, o do sistema, que pode usar a internet (no Brasil, quase sempre o do Google) |
 | OSRM (e o servidor do FOSSGIS, a pé) | Cálculo de rotas |
 | TomTom | Trânsito no mapa e rotas com trânsito, para todos, com a chave do MUSE (vão a área do mapa, a partida e o destino); busca de endereços só com a sua própria chave |
 | Open-Meteo | Previsão do tempo ao longo da rota |
@@ -118,7 +124,9 @@ aos outros membros daquele rolê:
 - o apelido que você escolher (até 12 letras) e a sua cor;
 - a posição da moto, o rumo, a velocidade e se ela está andando ou parada;
 - o trecho da rota logo à frente (até cerca de 3 km);
-- se você for o líder, o destino e as paradas do rolê (nome e coordenada).
+- se você for o líder, o destino e as paradas do rolê (nome e coordenada);
+- os recados que você mandar pelos comandos de voz, que o servidor repassa na
+  hora aos membros conectados e **não guarda**.
 
 O app só manda a posição quando **outro membro está conectado**, e só quando
 ela muda de um jeito que os outros não conseguiriam prever (por exemplo, ao
@@ -131,6 +139,25 @@ quando o último membro sai, depois de 8 horas sem nenhuma posição ou depois d
 24 horas. Quem sai do rolê deixa de receber e de mandar na hora. O código do
 rolê é o que dá acesso a ele: quem tiver o código pode entrar, até o limite de
 8 membros, e a página do convite não mostra posição nenhuma.
+
+## Comandos de voz (opcional)
+
+Durante a navegação, você pode chamar o MUSE pelo gesto de assistente do seu
+intercomunicador e fazer um pedido falado, como "quanto falta" ou "posto mais
+próximo". Para isso, o app pede a permissão do microfone e precisa ser
+escolhido como app de assistente do celular. **Nada disso acontece se você não
+ligar os comandos de voz** (Ajustes > Som), e eles vêm desligados.
+
+- O microfone **só abre por alguns segundos depois do seu chamado**, para ouvir
+  o pedido; ele não fica escutando o tempo todo.
+- O que você fala vai ao reconhecimento de voz do Android (veja a tabela
+  acima), que devolve o texto ao app. O MUSE **não grava nem guarda o áudio**
+  nem o texto do pedido.
+- O que o pedido precisar sai pelos mesmos caminhos de sempre: a busca de um
+  endereço ou de um lugar à frente vai aos serviços de mapa; um recado vai à
+  viagem ao vivo e ao rolê em grupo, se estiverem ligados.
+- Fora da navegação, o chamado é passado ao outro assistente do celular, que
+  segue a política dele.
 
 ## Sincronização com a conta Google (opcional)
 
@@ -186,7 +213,8 @@ o painel.
 ## Mudanças nesta política
 
 Quando o app mudar o que faz com os dados, esta página é atualizada e a data no
-topo muda.
+topo muda. Na próxima vez que você abrir o app, ele avisa que a política mudou
+e pede que você a aceite para continuar.
 
 ## Contato
 
