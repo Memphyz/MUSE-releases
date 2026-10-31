@@ -9,9 +9,9 @@ explica que dados o app usa, onde eles ficam e com quem eles são trocados.
 ## Resumo
 
 - O MUSE **não guarda o que você faz no app**. O único servidor dele existe só
-  para a **viagem ao vivo**, e só recebe algo quando você compartilha uma viagem
-  (veja abaixo). Ele guarda apenas a última posição e apaga tudo quando a
-  viagem acaba.
+  para a **viagem ao vivo** e o **rolê em grupo**, e só recebe algo quando você
+  compartilha uma viagem ou entra num rolê (veja abaixo). Ele guarda apenas a
+  última posição e apaga tudo quando a viagem ou o rolê acaba.
 - Não há anúncios, rastreamento, análise de uso nem venda de dados.
 - Seus dados ficam no seu celular e, se você quiser, numa pasta escondida do
   **seu próprio** Google Drive.
@@ -32,17 +32,20 @@ explica que dados o app usa, onde eles ficam e com quem eles são trocados.
 - O pareamento com o painel da moto.
 - O link da viagem ao vivo que estiver em uso e, se você ligar, o seu link
   fixo (veja abaixo).
+- O rolê em grupo em que você estiver (o código e a chave de membro) e o último
+  apelido que você usou nele.
 
 Esses dados ficam no armazenamento do próprio app. O Android pode copiá-los para
-um celular novo na transferência entre aparelhos; o pareamento com o painel e os
-links da viagem ao vivo nunca são copiados.
+um celular novo na transferência entre aparelhos; o pareamento com o painel, os
+links da viagem ao vivo e o rolê em grupo nunca são copiados.
 
 ## Localização
 
 O app usa a localização do celular para mostrar a sua posição, calcular rotas,
 avisar de radares e lombadas e gravar o histórico de viagens. A localização é
 usada no próprio celular e só sai dele nas consultas aos serviços descritos
-abaixo e, se você compartilhar uma viagem, para o servidor da viagem ao vivo.
+abaixo e, se você compartilhar uma viagem ou entrar num rolê em grupo, para o
+servidor do MUSE.
 
 ## Serviços externos que o app consulta
 
@@ -101,6 +104,34 @@ não mostrar onde você mora. Você pode trocar ou desligar o link a qualquer
 momento, e o antigo para de funcionar para todo mundo. Um link fixo sem
 nenhuma viagem por 90 dias é apagado sozinho.
 
+## Rolê em grupo (opcional)
+
+Você pode criar um rolê e chamar outros pilotos do MUSE por um código ou link,
+ou entrar no rolê de alguém. Quem cria é o líder e escolhe o destino e as
+paradas; cada membro aparece para os outros como uma bolinha colorida no mapa
+do app e no painel da moto. **Nada disso acontece se você não criar nem entrar
+num rolê.**
+
+Enquanto você está no rolê, o app manda ao mesmo servidor do MUSE, que repassa
+aos outros membros daquele rolê:
+
+- o apelido que você escolher (até 12 letras) e a sua cor;
+- a posição da moto, o rumo, a velocidade e se ela está andando ou parada;
+- o trecho da rota logo à frente (até cerca de 3 km);
+- se você for o líder, o destino e as paradas do rolê (nome e coordenada).
+
+O app só manda a posição quando **outro membro está conectado**, e só quando
+ela muda de um jeito que os outros não conseguiriam prever (por exemplo, ao
+mudar de velocidade ou sair do caminho). A pé, nada é enviado.
+
+O servidor **não grava a posição**: ela fica só na memória dele, enquanto o
+rolê está em uso, e nunca forma um trajeto. Ficam guardados apenas o apelido, a
+cor e o destino com as paradas, e tudo é apagado quando o líder encerra o rolê,
+quando o último membro sai, depois de 8 horas sem nenhuma posição ou depois de
+24 horas. Quem sai do rolê deixa de receber e de mandar na hora. O código do
+rolê é o que dá acesso a ele: quem tiver o código pode entrar, até o limite de
+8 membros, e a página do convite não mostra posição nenhuma.
+
 ## Sincronização com a conta Google (opcional)
 
 Se você conectar uma conta Google em Ajustes > Conta, o app guarda uma cópia dos
@@ -112,7 +143,7 @@ veículos com a placa, os dias de pedágio pagos e o passaporte da Rota Biker (a
 identificação, os carimbos e a foto, para ela aparecer nos seus outros
 celulares).
 
-Os links da viagem ao vivo não vão para a conta Google.
+Os links da viagem ao vivo e o rolê em grupo não vão para a conta Google.
 
 O catálogo dos monumentos da Rota Biker é montado uma vez por dia, fora do
 app, a partir da página pública do movimento (monumentobikers.com.br) e do mapa
@@ -149,6 +180,8 @@ o painel.
   Google.
 - A viagem ao vivo se apaga sozinha no fim da viagem; tocar em Parar apaga na
   hora. O link fixo se apaga ao desligá-lo ou trocá-lo.
+- No rolê em grupo, sair tira você do rolê na hora; o rolê inteiro se apaga
+  quando o líder o encerra ou o último membro sai.
 
 ## Mudanças nesta política
 
