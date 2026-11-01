@@ -183,6 +183,23 @@ ligar os comandos de voz** (Ajustes > Som), e eles vêm desligados.
 - Fora da navegação, o chamado é passado ao outro assistente do celular, que
   segue a política dele.
 
+## Acesso às notificações (opcional)
+
+O app só pede este acesso se você ligar "Controlar a música" (Ajustes > Som) ou
+"Quem está ligando" e "Música" (Ajustes > Painel), e todos vêm desligados. O
+Android não oferece um acesso menor: **o app passa a poder ver as notificações de
+todos os apps**, por isso esta é a regra do que ele faz com elas:
+
+- **Só olha a música e as ligações.** Da música, usa o que está tocando, o título e
+  os controles (pausar, pular). Da ligação, o nome que a notificação mostra enquanto
+  o telefone toca. **Mensagens e as demais notificações não são lidas.**
+- O título da música e o nome de quem liga **vão só ao painel da moto, por
+  Bluetooth**, e somem da tela em seguida. Não são gravados, não vão para o servidor
+  do MUSE nem para a sua conta Google.
+- O app não pede permissão de telefone, de contatos nem de registro de chamadas.
+- Você pode tirar o acesso a qualquer momento nas configurações do Android
+  (Notificações > Acesso a notificações).
+
 ## Documentos do veículo e CNH (opcional)
 
 Em Ajustes > Débitos e documentos, o app mostra quando vencem o licenciamento e
@@ -249,8 +266,8 @@ incluindo os requisitos de Uso Limitado.
 ## Bluetooth
 
 O app envia ao painel da moto, por Bluetooth, os dados que o painel mostra: rota,
-velocidade, avisos, hora e tema da tela. Essa conexão é direta entre o celular e
-o painel.
+velocidade, avisos, hora e tema da tela e, se você ligar, quem está ligando e a
+música. Essa conexão é direta entre o celular e o painel.
 
 ## Apagar os seus dados
 
