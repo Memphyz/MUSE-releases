@@ -12,7 +12,9 @@ explica que dados o app usa, onde eles ficam e com quem eles são trocados.
   para a **viagem ao vivo** e o **rolê em grupo**, e só recebe algo quando você
   compartilha uma viagem ou entra num rolê (veja abaixo). Ele guarda apenas a
   última posição e apaga tudo quando a viagem ou o rolê acaba.
-- Não há anúncios, rastreamento, análise de uso nem venda de dados.
+- Não há anúncios, rastreamento nem venda de dados. A única medição de uso é
+  a do leitor de texto do Google (ML Kit), sobre a própria ferramenta, quando
+  você importa a CNH (veja "Documentos do veículo e CNH").
 - Seus dados ficam no seu celular e, se você quiser, numa pasta escondida do
   **seu próprio** Google Drive.
 
@@ -23,7 +25,10 @@ explica que dados o app usa, onde eles ficam e com quem eles são trocados.
 - Números de uso acumulados (quilômetros, tempo, recordes) e o seu ritmo de
   pilotagem, usado para estimar a hora de chegada.
 - Ajustes do app e, se você informar, a sua chave de acesso ao TomTom.
-- Seus veículos (apelido e placa) e os dias de pedágio sem cancela já pagos.
+- Seus veículos (apelido, placa, estado, moto ou carro e, se você informar ou
+  importar, o Renavam) e os dias de pedágio sem cancela já pagos.
+- O licenciamento e o IPVA que você marcou como pagos e, se você informar ou
+  importar, a validade e a categoria da sua CNH.
 - Mapas e alertas baixados para usar sem internet, e os catálogos dos
   monumentos da Rota Biker e da Faixa Azul.
 - O seu passaporte da Rota Biker, se você o preencher: a identificação (cidade,
@@ -71,6 +76,8 @@ Nenhuma delas leva seu nome, e-mail ou identificação da conta.
 | Mapillary | Foto da rua ao escolher um destino no mapa (vai a posição do ponto escolhido) |
 | ViaCEP | Busca de endereço pelo CEP |
 | GitHub | Download dos mapas offline, dos catálogos (Rota Biker, Faixa Azul) e das atualizações do app e do painel |
+| Google (ML Kit) | Só ao importar a CNH: métricas de uso e desempenho do leitor de texto (aparelho, versão do app, tempo de leitura). **A imagem e o texto lido não são enviados** |
+| Sites do Detran, da Secretaria da Fazenda e do Pedágio Digital | Abertos no navegador quando você toca nos atalhos de Débitos e documentos; o app não envia nada a eles (a placa vai no endereço do Pedágio Digital, e o Renavam fica copiado para você colar) |
 
 Cada serviço tem a própria política de privacidade.
 
@@ -159,6 +166,30 @@ ligar os comandos de voz** (Ajustes > Som), e eles vêm desligados.
 - Fora da navegação, o chamado é passado ao outro assistente do celular, que
   segue a política dele.
 
+## Documentos do veículo e CNH (opcional)
+
+Em Ajustes > Débitos e documentos, o app mostra quando vencem o licenciamento e
+o IPVA de cada veículo e a validade da CNH. As datas vêm do calendário oficial
+de cada estado, que já vai dentro do app: **o app não consulta débitos** em
+nenhum órgão e não sabe o que você pagou; quem marca como pago é você.
+
+Você pode importar o **CRLV digital** e a **CNH digital** em PDF, da Carteira
+Digital de Trânsito, escolhendo o arquivo ou compartilhando-o de lá para o
+MUSE.
+
+- A leitura é feita **no celular**, e **o arquivo não é guardado** nem enviado
+  ao servidor do MUSE.
+- Do CRLV ficam só a placa, o Renavam, o estado, o tipo do veículo, o modelo
+  (como apelido) e o ano do licenciamento. Nome, CPF, chassi e o resto do
+  documento são descartados.
+- Da CNH ficam só a validade e a categoria. Nome, CPF, filiação e foto são
+  descartados.
+- A CNH digital traz o cartão como imagem, e quem lê o texto dela é o ML Kit,
+  do Google, que roda no próprio celular. Ele **não envia a imagem nem o texto
+  lido**, mas envia ao Google métricas de uso e desempenho da ferramenta (como o
+  modelo do aparelho, a versão do app e o tempo da leitura), segundo os
+  [termos do ML Kit](https://developers.google.com/ml-kit/terms).
+
 ## Sincronização com a conta Google (opcional)
 
 Se você conectar uma conta Google em Ajustes > Conta, o app guarda uma cópia dos
@@ -166,9 +197,10 @@ seus dados numa **pasta escondida do seu Google Drive** (a pasta de dados do
 aplicativo), para você recuperá-los em outro celular. Vão para lá os locais e
 rotas salvas, as últimas buscas, o histórico de viagens, os números de uso, o
 ritmo de pilotagem, os ajustes, incluindo a chave do TomTom, se houver, os seus
-veículos com a placa, os dias de pedágio pagos e o passaporte da Rota Biker (a
-identificação, os carimbos e a foto, para ela aparecer nos seus outros
-celulares).
+veículos com a placa, o estado e o Renavam, os dias de pedágio pagos, o
+licenciamento e o IPVA marcados como pagos, a validade e a categoria da CNH e o
+passaporte da Rota Biker (a identificação, os carimbos e a foto, para ela
+aparecer nos seus outros celulares).
 
 Os links da viagem ao vivo e o rolê em grupo não vão para a conta Google.
 
@@ -202,7 +234,8 @@ o painel.
 
 - Desinstalar o app apaga tudo o que ele guardou no celular.
 - Em Ajustes > Números é possível apagar os números e o ritmo; em Ajustes >
-  Histórico, as viagens.
+  Histórico, as viagens; em Ajustes > Veículos, um veículo com tudo o que é
+  dele; em Ajustes > Débitos e documentos, a validade e a categoria da CNH.
 - A cópia no Google Drive se apaga pelo app (Ajustes > Conta) ou pela sua conta
   Google.
 - A viagem ao vivo se apaga sozinha no fim da viagem; tocar em Parar apaga na
