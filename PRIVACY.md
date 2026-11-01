@@ -26,9 +26,10 @@ explica que dados o app usa, onde eles ficam e com quem eles são trocados.
   pilotagem, usado para estimar a hora de chegada.
 - Ajustes do app e, se você informar, a sua chave de acesso ao TomTom.
 - Seus veículos (apelido, placa, estado, moto ou carro e, se você informar ou
-  importar, o Renavam) e os dias de pedágio sem cancela já pagos.
+  importar, o Renavam, o chassi, o modelo, a cor, a cilindrada e o ano de
+  fabricação) e os dias de pedágio sem cancela já pagos.
 - O licenciamento e o IPVA que você marcou como pagos e, se você informar ou
-  importar, a validade e a categoria da sua CNH.
+  importar, a validade, a categoria e a data da 1ª habilitação da sua CNH.
 - Mapas e alertas baixados para usar sem internet, e os catálogos dos
   monumentos da Rota Biker e da Faixa Azul.
 - O seu passaporte da Rota Biker, se você o preencher: a identificação (cidade,
@@ -97,7 +98,10 @@ o app manda a ele:
   mais próximo;
 - se a moto está andando, parada num semáforo ou no trânsito;
 - a bateria do celular;
-- o recado que você escolher ou escrever, se houver.
+- o recado que você escolher ou escrever, se houver;
+- se você ligar "Mostrar a moto" (Ajustes > Veículos, desligado de início), o
+  modelo e a cor da moto da viagem (por exemplo, "Super Meteor 650 vermelha"),
+  para quem acompanha reconhecê-la. **Nunca a placa, o Renavam nem o chassi.**
 
 O servidor **guarda só o último envio**, nunca o trajeto, e não sabe quem é
 você. **Só manda a posição com alguém olhando**: se ninguém estiver com o
@@ -129,6 +133,8 @@ Enquanto você está no rolê, o app manda ao mesmo servidor do MUSE, que repass
 aos outros membros daquele rolê:
 
 - o apelido que você escolher (até 12 letras) e a sua cor;
+- se você ligar "Mostrar a moto", o modelo e a cor dela, que somem com o rolê
+  (nunca a placa, o Renavam nem o chassi);
 - a posição da moto, o rumo, a velocidade e se ela está andando ou parada;
 - o trecho da rota logo à frente (até cerca de 3 km);
 - se você for o líder, o destino e as paradas do rolê (nome e coordenada);
@@ -179,11 +185,16 @@ MUSE.
 
 - A leitura é feita **no celular**, e **o arquivo não é guardado** nem enviado
   ao servidor do MUSE.
-- Do CRLV ficam só a placa, o Renavam, o estado, o tipo do veículo, o modelo
-  (como apelido) e o ano do licenciamento. Nome, CPF, chassi e o resto do
-  documento são descartados.
-- Da CNH ficam só a validade e a categoria. Nome, CPF, filiação e foto são
-  descartados.
+- Do CRLV ficam só a placa, o Renavam, o chassi, o estado, o tipo do veículo,
+  o modelo, a cor, a cilindrada, o ano de fabricação e o ano do licenciamento.
+  Nome, CPF, número do motor e o resto do documento são descartados.
+- Da CNH ficam só a validade, a categoria e a data da 1ª habilitação (para
+  avisar da permissão para dirigir). Nome, CPF, filiação e foto são descartados.
+- O chassi e a cilindrada servem à consulta de recall e à isenção do IPVA, que
+  o app calcula no celular pela regra de cada estado.
+- **O Renavam e o chassi aparecem mascarados** (por exemplo, "014•••••219").
+  Para vê-los por inteiro, copiá-los, editar o veículo ou importar um documento,
+  o app pede a digital ou o bloqueio de tela do celular, quando houver.
 - A CNH digital traz o cartão como imagem, e quem lê o texto dela é o ML Kit,
   do Google, que roda no próprio celular. Ele **não envia a imagem nem o texto
   lido**, mas envia ao Google métricas de uso e desempenho da ferramenta (como o
@@ -197,9 +208,9 @@ seus dados numa **pasta escondida do seu Google Drive** (a pasta de dados do
 aplicativo), para você recuperá-los em outro celular. Vão para lá os locais e
 rotas salvas, as últimas buscas, o histórico de viagens, os números de uso, o
 ritmo de pilotagem, os ajustes, incluindo a chave do TomTom, se houver, os seus
-veículos com a placa, o estado e o Renavam, os dias de pedágio pagos, o
-licenciamento e o IPVA marcados como pagos, a validade e a categoria da CNH e o
-passaporte da Rota Biker (a identificação, os carimbos e a foto, para ela
+veículos com a placa, o estado, o Renavam, o chassi, o modelo, a cor, a
+cilindrada e o ano, os dias de pedágio pagos, o licenciamento e o IPVA marcados
+como pagos, a validade, a categoria e a 1ª habilitação da CNH e o passaporte da Rota Biker (a identificação, os carimbos e a foto, para ela
 aparecer nos seus outros celulares).
 
 Os links da viagem ao vivo e o rolê em grupo não vão para a conta Google.
