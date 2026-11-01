@@ -1,6 +1,6 @@
 # Política de privacidade do MUSE
 
-Última atualização: 31 de outubro de 2026
+Última atualização: 1 de novembro de 2026
 
 O MUSE é um aplicativo de navegação para motociclistas que conversa com um
 painel instalado na moto. É um projeto pessoal, sem fins comerciais. Esta página
@@ -37,7 +37,8 @@ explica que dados o app usa, onde eles ficam e com quem eles são trocados.
   carimbados e, se escolher uma, a foto.
 - O pareamento com o painel da moto.
 - O link da viagem ao vivo que estiver em uso e, se você ligar, o seu link
-  fixo (veja abaixo).
+  fixo (veja abaixo). Sem internet, também o aviso de chegada ou de fim da viagem,
+  até ele poder ser enviado.
 - O rolê em grupo em que você estiver (o código e a chave de membro) e o último
   apelido que você usou nele.
 
@@ -93,7 +94,9 @@ o app manda a ele:
 
 - a posição da moto, o rumo e a velocidade;
 - o trecho da rota logo à frente (até cerca de 800 m) e o trânsito nele, que
-  **para 300 m antes do destino**: o destino não é enviado;
+  **para cerca de 10 m antes do destino**. O nome do destino não é enviado, mas
+  a posição da moto vai até o fim: **ao chegar, quem tem o link vê onde ela
+  parou**;
 - o que falta até o destino, a hora prevista de chegada e o congestionamento
   mais próximo;
 - se a moto está andando, parada num semáforo ou no trânsito;
@@ -107,19 +110,27 @@ O servidor **guarda só o último envio**, nunca o trajeto, e não sabe quem é
 você. **Só manda a posição com alguém olhando**: se ninguém estiver com o
 link aberto, o app não envia posição nenhuma. Quem tem o link vê a moto andar
 no mapa (o caminho já percorrido fica só no navegador de quem acompanha) e pode
-abrir a posição no MUSE para ir até lá. O link não aparece em buscadores.
+abrir a posição no MUSE para ir até lá. O link não aparece em buscadores. O app
+mostra a você quantas pessoas estão com o link aberto, mas não quem são.
+
+A página de quem acompanha carrega o mapa do OpenFreeMap, a biblioteca do mapa do
+unpkg e a fonte do Google Fonts. Esses serviços recebem o endereço de internet de
+quem acompanha, e o OpenFreeMap também a região do mapa que aparece na tela.
 
 O link de uma viagem para de funcionar quando você toca em Parar, 30 minutos
-depois da chegada, ou depois de 8 horas sem posição (celular desligado, estrada
-sem sinal). Nesses casos, tudo o que estava no servidor é apagado.
+depois da chegada, depois de 8 horas sem posição com o app desconectado (celular
+desligado, app fechado) ou, em qualquer caso, 24 horas depois de criado. Nesses
+casos, tudo o que estava no servidor é apagado. Sem internet na hora de Parar ou
+de chegar, o aviso fica guardado no celular e é enviado quando a internet voltar.
 
 **Link fixo (opcional):** se você ligar "Mesmo link em toda viagem", o mesmo
-link mostra todas as suas navegações, sem você precisar compartilhar de novo.
-Entre uma viagem e outra o servidor não guarda nenhuma posição, e o link mostra
-"sem viagem agora". Os **primeiros 300 m de cada saída não são enviados**, para
-não mostrar onde você mora. Você pode trocar ou desligar o link a qualquer
-momento, e o antigo para de funcionar para todo mundo. Um link fixo sem
-nenhuma viagem por 90 dias é apagado sozinho.
+link mostra todas as suas navegações de moto ou carro, sem você precisar
+compartilhar de novo; a pé, só se você tocar em Compartilhar. Entre uma viagem e
+outra o servidor não guarda nenhuma posição, e o link mostra "sem viagem agora".
+Os **primeiros 300 m de cada saída não são enviados**, para não mostrar onde você
+mora. A chegada aparece, como em qualquer viagem. Você pode trocar ou desligar o
+link a qualquer momento, e o antigo para de funcionar para todo mundo. Um link
+fixo é apagado sozinho depois de 90 dias sem o app se conectar a ele.
 
 ## Rolê em grupo (opcional)
 
@@ -250,7 +261,7 @@ o painel.
 - A cópia no Google Drive se apaga pelo app (Ajustes > Conta) ou pela sua conta
   Google.
 - A viagem ao vivo se apaga sozinha no fim da viagem; tocar em Parar apaga na
-  hora. O link fixo se apaga ao desligá-lo ou trocá-lo.
+  hora, ou assim que a internet voltar. O link fixo se apaga ao desligá-lo ou trocá-lo.
 - No rolê em grupo, sair tira você do rolê na hora; o rolê inteiro se apaga
   quando o líder o encerra ou o último membro sai.
 
