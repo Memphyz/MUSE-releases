@@ -1,6 +1,6 @@
 # Política de privacidade do MUSE
 
-Última atualização: 1 de novembro de 2026
+Última atualização: 18 de novembro de 2026
 
 O MUSE é um aplicativo de navegação para motociclistas que conversa com um
 painel instalado na moto. É um projeto pessoal, sem fins comerciais. Esta página
@@ -41,6 +41,8 @@ explica que dados o app usa, onde eles ficam e com quem eles são trocados.
   até ele poder ser enviado.
 - O rolê em grupo em que você estiver (o código e a chave de membro) e o último
   apelido que você usou nele.
+- Se você ligar as rotinas, quando, de onde e para onde cada viagem saiu, e as
+  rotinas que o app sugeriu ou que você criou (veja "Rotinas").
 
 Esses dados ficam no armazenamento do próprio app. O Android pode copiá-los para
 um celular novo na transferência entre aparelhos; o pareamento com o painel, os
@@ -53,6 +55,11 @@ avisar de radares e lombadas e gravar o histórico de viagens. A localização �
 usada no próprio celular e só sai dele nas consultas aos serviços descritos
 abaixo e, se você compartilhar uma viagem ou entrar num rolê em grupo, para o
 servidor do MUSE.
+
+Com o app fechado, o app só recebe a localização se você permitir a localização
+o tempo todo, o que ele só pede ao ligar as rotinas (veja "Rotinas"). Nesse caso,
+ele a recebe enquanto o painel está conectado, e ela segue os mesmos usos de
+quando o app está aberto.
 
 ## Microfone
 
@@ -200,6 +207,27 @@ todos os apps**, por isso esta é a regra do que ele faz com elas:
 - Você pode tirar o acesso a qualquer momento nas configurações do Android
   (Notificações > Acesso a notificações).
 
+## Rotinas (opcional)
+
+As rotinas começam sozinhas a rota de todo dia, como a ida ao trabalho, quando o
+painel conecta no dia e no horário de costume e a moto está no ponto de partida.
+**Nada disso acontece se você não ligar as rotinas** (Ajustes > Rota > Rotinas), e
+elas vêm desligadas.
+
+- Ligadas, o app guarda **no celular** quando, de onde e para onde cada viagem
+  saiu, para achar os trajetos que se repetem. As viagens do histórico entram
+  nesse registro ao ligar. Ele guarda só os últimos 120 dias e não guarda o
+  trajeto percorrido.
+- O app só sugere a rotina; ela só começa sozinha se você a ativar ou se você
+  mesmo a criar.
+- Para conferir o ponto de partida com o app fechado, o app pede a localização o
+  tempo todo. Com ela, o app recebe a posição enquanto o painel está conectado,
+  mesmo fechado. Sem ela, a rotina só começa com o app aberto.
+- O registro e as rotinas **não saem do celular**: não vão para o servidor do
+  MUSE nem para a sua conta Google. A rota que a rotina começa é calculada como
+  qualquer outra (veja a tabela acima).
+- Desligar as rotinas apaga o registro das viagens.
+
 ## Documentos do veículo e CNH (opcional)
 
 Em Ajustes > Débitos e documentos, o app mostra quando vencem o licenciamento e
@@ -241,7 +269,8 @@ cilindrada e o ano, os dias de pedágio pagos, o licenciamento e o IPVA marcados
 como pagos, a validade, a categoria e a 1ª habilitação da CNH e o passaporte da Rota Biker (a identificação, os carimbos e a foto, para ela
 aparecer nos seus outros celulares).
 
-Os links da viagem ao vivo e o rolê em grupo não vão para a conta Google.
+Os links da viagem ao vivo, o rolê em grupo e as rotinas, com o registro das
+viagens delas, não vão para a conta Google.
 
 O catálogo dos monumentos da Rota Biker é montado uma vez por dia, fora do
 app, a partir da página pública do movimento (monumentobikers.com.br) e do mapa
@@ -274,7 +303,9 @@ música. Essa conexão é direta entre o celular e o painel.
 - Desinstalar o app apaga tudo o que ele guardou no celular.
 - Em Ajustes > Números é possível apagar os números e o ritmo; em Ajustes >
   Histórico, as viagens; em Ajustes > Veículos, um veículo com tudo o que é
-  dele; em Ajustes > Débitos e documentos, a validade e a categoria da CNH.
+  dele; em Ajustes > Débitos e documentos, a validade e a categoria da CNH; em
+  Ajustes > Rota > Rotinas, desligar apaga o registro das viagens, e cada rotina
+  se apaga no editor dela.
 - A cópia no Google Drive se apaga pelo app (Ajustes > Conta) ou pela sua conta
   Google.
 - A viagem ao vivo se apaga sozinha no fim da viagem; tocar em Parar apaga na
