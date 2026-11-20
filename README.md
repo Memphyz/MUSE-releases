@@ -5,8 +5,9 @@ do modo offline e os catálogos das estradas. O MUSE é um painel para motocicle
 app Android, firmware do painel e carcaça impressa.
 
 **Este repositório não tem código e não roda nada.** Ele guarda o que é publicado,
-como anexos de releases de etiqueta fixa, e a [política de privacidade](PRIVACY.md)
-do app. O projeto do MUSE fica num repositório privado, e o GitHub não entrega anexo
+como anexos de releases de etiqueta fixa, a [política de privacidade](PRIVACY.md)
+e os [termos de uso](TERMS.md) do app, que o site mostra em
+musenav.vercel.app/privacidade e /termos. O projeto do MUSE fica num repositório privado, e o GitHub não entrega anexo
 de release privada sem login. Como o app baixa sem login, o que ele baixa precisa
 morar num repositório público. É para isso que este existe.
 
