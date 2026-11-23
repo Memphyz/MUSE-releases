@@ -1,6 +1,6 @@
 # Política de privacidade do MUSE
 
-Última atualização: 18 de novembro de 2026
+Última atualização: 23 de novembro de 2026
 
 O MUSE é um aplicativo de navegação para motociclistas que conversa com um
 painel instalado na moto. É um projeto pessoal, sem fins comerciais. Esta página
@@ -9,9 +9,12 @@ explica que dados o app usa, onde eles ficam e com quem eles são trocados.
 ## Resumo
 
 - O MUSE **não guarda o que você faz no app**. O único servidor dele existe só
-  para a **viagem ao vivo** e o **rolê em grupo**, e só recebe algo quando você
-  compartilha uma viagem ou entra num rolê (veja abaixo). Ele guarda apenas a
-  última posição e apaga tudo quando a viagem ou o rolê acaba.
+  para a **viagem ao vivo**, o **grupo** e o **relato de problema**, e só
+  recebe algo quando você compartilha uma viagem, entra num grupo ou envia um
+  relato (veja abaixo). Da viagem e do grupo ele guarda apenas a última posição e
+  apaga tudo quando acabam; o relato ele entrega aos desenvolvedores, e mais ninguém o vê.
+  Ele também diz se há alagamento na cidade da sua rota; para isso o app manda
+  só o nome da cidade, nunca a posição (veja "Alagamentos ao vivo").
 - Não há anúncios, rastreamento nem venda de dados. A única medição de uso é
   a do leitor de texto do Google (ML Kit), sobre a própria ferramenta, quando
   você importa a CNH (veja "Documentos do veículo e CNH").
@@ -39,32 +42,27 @@ explica que dados o app usa, onde eles ficam e com quem eles são trocados.
 - O link da viagem ao vivo que estiver em uso e, se você ligar, o seu link
   fixo (veja abaixo). Sem internet, também o aviso de chegada ou de fim da viagem,
   até ele poder ser enviado.
-- O rolê em grupo em que você estiver (o código e a chave de membro) e o último
+- O grupo em que você estiver (o código e a chave de membro) e o último
   apelido que você usou nele.
 - Se você ligar as rotinas, quando, de onde e para onde cada viagem saiu, e as
   rotinas que o app sugeriu ou que você criou (veja "Rotinas").
 
 Esses dados ficam no armazenamento do próprio app. O Android pode copiá-los para
 um celular novo na transferência entre aparelhos; o pareamento com o painel, os
-links da viagem ao vivo e o rolê em grupo nunca são copiados.
+links da viagem ao vivo e o grupo nunca são copiados.
 
 ## Localização
 
 O app usa a localização do celular para mostrar a sua posição, calcular rotas,
 avisar de radares e lombadas e gravar o histórico de viagens. A localização é
 usada no próprio celular e só sai dele nas consultas aos serviços descritos
-abaixo e, se você compartilhar uma viagem ou entrar num rolê em grupo, para o
+abaixo e, se você compartilhar uma viagem ou entrar num grupo, para o
 servidor do MUSE.
 
 Com o app fechado, o app só recebe a localização se você permitir a localização
 o tempo todo, o que ele só pede ao ligar as rotinas (veja "Rotinas"). Nesse caso,
 ele a recebe enquanto o painel está conectado, e ela segue os mesmos usos de
 quando o app está aberto.
-
-## Microfone
-
-O app só usa o microfone nos comandos de voz, se você os ligar, e só por
-alguns segundos depois de cada chamado (veja "Comandos de voz").
 
 ## Serviços externos que o app consulta
 
@@ -76,15 +74,15 @@ Nenhuma delas leva seu nome, e-mail ou identificação da conta.
 | Serviço | Para quê |
 |---|---|
 | OpenFreeMap | As imagens do mapa (a área que aparece na tela) |
-| OpenStreetMap (Nominatim e Overpass) | Busca de endereços, limites de velocidade, radares e dados das vias; nos comandos de voz, os lugares à frente na rota (posto, borracharia, oficina) e o bairro e o lugar conhecido de onde você está |
-| Reconhecimento de voz do Android | Nos comandos de voz, entender o pedido falado. Usa o reconhecimento do próprio celular, sem internet, quando ele tem o idioma; senão, o do sistema, que pode usar a internet (no Brasil, quase sempre o do Google) |
+| OpenStreetMap (Nominatim e Overpass) | Busca de endereços, limites de velocidade, radares e dados das vias |
 | OSRM (e o servidor do FOSSGIS, a pé) | Cálculo de rotas |
 | TomTom | Trânsito no mapa e rotas com trânsito, para todos, com a chave do MUSE (vão a área do mapa, a partida e o destino); busca de endereços só com a sua própria chave |
 | Open-Meteo | Previsão do tempo ao longo da rota |
 | INMET | Avisos meteorológicos oficiais na região da rota |
 | Mapillary | Foto da rua ao escolher um destino no mapa (vai a posição do ponto escolhido) |
 | ViaCEP | Busca de endereço pelo CEP |
-| GitHub | Download dos mapas offline, dos catálogos (Rota Biker, Faixa Azul) e das atualizações do app e do painel |
+| Google Play | Saber se há versão nova do app na loja |
+| GitHub | Download dos mapas offline, dos catálogos (Rota Biker, Faixa Azul, roubo e furto de moto, estradas do modo passeio), das novidades de cada versão do app e das atualizações do painel; e, se você enviar um relato, onde os desenvolvedores o recebem e guardam, num repositório privado (veja "Relatar um problema") |
 | Google (ML Kit) | Só ao importar a CNH: métricas de uso e desempenho do leitor de texto (aparelho, versão do app, tempo de leitura). **A imagem e o texto lido não são enviados** |
 | Sites do Detran, da Secretaria da Fazenda e do Pedágio Digital | Abertos no navegador quando você toca nos atalhos de Débitos e documentos; o app não envia nada a eles (a placa vai no endereço do Pedágio Digital, e o Renavam fica copiado para você colar) |
 
@@ -139,67 +137,46 @@ mora. A chegada aparece, como em qualquer viagem. Você pode trocar ou desligar 
 link a qualquer momento, e o antigo para de funcionar para todo mundo. Um link
 fixo é apagado sozinho depois de 90 dias sem o app se conectar a ele.
 
-## Rolê em grupo (opcional)
+## Andar em grupo (opcional)
 
-Você pode criar um rolê e chamar outros pilotos do MUSE por um código ou link,
-ou entrar no rolê de alguém. Quem cria é o líder e escolhe o destino e as
+Você pode criar um grupo e chamar outros pilotos do MUSE por um código ou link,
+ou entrar no grupo de alguém. Quem cria é o líder e escolhe o destino e as
 paradas; cada membro aparece para os outros como uma bolinha colorida no mapa
 do app e no painel da moto. **Nada disso acontece se você não criar nem entrar
-num rolê.**
+num grupo.**
 
-Enquanto você está no rolê, o app manda ao mesmo servidor do MUSE, que repassa
-aos outros membros daquele rolê:
+Enquanto você está no grupo, o app manda ao mesmo servidor do MUSE, que repassa
+aos outros membros daquele grupo:
 
 - o apelido que você escolher (até 12 letras) e a sua cor;
-- se você ligar "Mostrar a moto", o modelo e a cor dela, que somem com o rolê
+- se você ligar "Mostrar a moto", o modelo e a cor dela, que somem com o grupo
   (nunca a placa, o Renavam nem o chassi);
 - a posição da moto, o rumo, a velocidade e se ela está andando ou parada;
 - o trecho da rota logo à frente (até cerca de 3 km);
-- se você for o líder, o destino e as paradas do rolê (nome e coordenada);
-- os recados que você mandar pelos comandos de voz, que o servidor repassa na
-  hora aos membros conectados e **não guarda**.
+- se você for o líder, o destino e as paradas do grupo (nome e coordenada).
 
 O app só manda a posição quando **outro membro está conectado**, e só quando
 ela muda de um jeito que os outros não conseguiriam prever (por exemplo, ao
 mudar de velocidade ou sair do caminho). A pé, nada é enviado.
 
 O servidor **não grava a posição**: ela fica só na memória dele, enquanto o
-rolê está em uso, e nunca forma um trajeto. Ficam guardados apenas o apelido, a
-cor e o destino com as paradas, e tudo é apagado quando o líder encerra o rolê,
+grupo está em uso, e nunca forma um trajeto. Ficam guardados apenas o apelido, a
+cor e o destino com as paradas, e tudo é apagado quando o líder encerra o grupo,
 quando o último membro sai, depois de 8 horas sem nenhuma posição ou depois de
-24 horas. Quem sai do rolê deixa de receber e de mandar na hora. O código do
-rolê é o que dá acesso a ele: quem tiver o código pode entrar, até o limite de
+24 horas. Quem sai do grupo deixa de receber e de mandar na hora. O código do
+grupo é o que dá acesso a ele: quem tiver o código pode entrar, até o limite de
 8 membros, e a página do convite não mostra posição nenhuma.
-
-## Comandos de voz (opcional)
-
-Durante a navegação, você pode chamar o MUSE pelo gesto de assistente do seu
-intercomunicador e fazer um pedido falado, como "quanto falta" ou "posto mais
-próximo". Para isso, o app pede a permissão do microfone e precisa ser
-escolhido como app de assistente do celular. **Nada disso acontece se você não
-ligar os comandos de voz** (Ajustes > Som), e eles vêm desligados.
-
-- O microfone **só abre por alguns segundos depois do seu chamado**, para ouvir
-  o pedido; ele não fica escutando o tempo todo.
-- O que você fala vai ao reconhecimento de voz do Android (veja a tabela
-  acima), que devolve o texto ao app. O MUSE **não grava nem guarda o áudio**
-  nem o texto do pedido.
-- O que o pedido precisar sai pelos mesmos caminhos de sempre: a busca de um
-  endereço ou de um lugar à frente vai aos serviços de mapa; um recado vai à
-  viagem ao vivo e ao rolê em grupo, se estiverem ligados.
-- Fora da navegação, o chamado é passado ao outro assistente do celular, que
-  segue a política dele.
 
 ## Acesso às notificações (opcional)
 
-O app só pede este acesso se você ligar "Controlar a música" (Ajustes > Som) ou
-"Quem está ligando" e "Música" (Ajustes > Painel), e todos vêm desligados. O
-Android não oferece um acesso menor: **o app passa a poder ver as notificações de
-todos os apps**, por isso esta é a regra do que ele faz com elas:
+O app só pede este acesso se você ligar "Quem está ligando" ou "Música"
+(Ajustes > Painel), e os dois vêm desligados. O Android não oferece um acesso
+menor: **o app passa a poder ver as notificações de todos os apps**, por isso
+esta é a regra do que ele faz com elas:
 
-- **Só olha a música e as ligações.** Da música, usa o que está tocando, o título e
-  os controles (pausar, pular). Da ligação, o nome que a notificação mostra enquanto
-  o telefone toca. **Mensagens e as demais notificações não são lidas.**
+- **Só olha a música e as ligações.** Da música, usa o que está tocando e o
+  título. Da ligação, o nome que a notificação mostra enquanto o telefone toca.
+  **Mensagens e as demais notificações não são lidas.**
 - O título da música e o nome de quem liga **vão só ao painel da moto, por
   Bluetooth**, e somem da tela em seguida. Não são gravados, não vão para o servidor
   do MUSE nem para a sua conta Google.
@@ -266,10 +243,13 @@ rotas salvas, as últimas buscas, o histórico de viagens, os números de uso, o
 ritmo de pilotagem, os ajustes, incluindo a chave do TomTom, se houver, os seus
 veículos com a placa, o estado, o Renavam, o chassi, o modelo, a cor, a
 cilindrada e o ano, os dias de pedágio pagos, o licenciamento e o IPVA marcados
-como pagos, a validade, a categoria e a 1ª habilitação da CNH e o passaporte da Rota Biker (a identificação, os carimbos e a foto, para ela
-aparecer nos seus outros celulares).
+como pagos, a validade, a categoria e a 1ª habilitação da CNH e o passaporte da
+Rota Biker (a identificação, os carimbos e a foto, para ela aparecer nos seus
+outros celulares) e os seus relatos de problema (o número, o começo do texto e a
+chave de cada um, para você continuar as conversas com os desenvolvedores em
+outro celular).
 
-Os links da viagem ao vivo, o rolê em grupo e as rotinas, com o registro das
+Os links da viagem ao vivo, o grupo e as rotinas, com o registro das
 viagens delas, não vão para a conta Google.
 
 O catálogo dos monumentos da Rota Biker é montado uma vez por dia, fora do
@@ -292,6 +272,52 @@ O uso dos dados recebidos das APIs do Google segue a
 [Política de dados do usuário dos serviços de API do Google](https://developers.google.com/terms/api-services-user-data-policy),
 incluindo os requisitos de Uso Limitado.
 
+## Relatar um problema (opcional)
+
+Em Ajustes > Relatar um problema você pode contar um problema, sugerir algo e
+conversar com os desenvolvedores sobre ele. **Nada disso acontece se você não
+enviar um relato.**
+
+- O relato vai ao servidor do MUSE, que o entrega aos desenvolvedores num
+  repositório **privado** do GitHub: só eles o leem. O servidor não guarda o
+  relato. A resposta deles aparece no próprio app.
+- Vão: o texto que você escrever, se é problema ou sugestão, a versão do app, a
+  versão do firmware do painel, o modelo do celular, a versão do Android e os
+  **ajustes do app**, que são só escolhas e permissões: idioma, tema, aparência,
+  som, quais avisos estão ligados, as preferências de rota, os ajustes do painel,
+  se há chave própria do TomTom (nunca a chave), quantos estados há baixados para
+  uso sem internet (nunca quais), se as permissões de localização, Bluetooth e
+  notificações foram dadas, a otimização de bateria, de onde o app foi instalado,
+  o fuso em horas (UTC-03:00, nunca a cidade) e o tamanho da fonte.
+- Se você marcar "Incluir o registro do painel", vai também o registro de eventos
+  que o painel anotou (sem posição).
+- **Anexos**: os prints e vídeos que você escolher (até 3 por mensagem, até 50 MB
+  cada). Eles mostram o que estiver na tela, inclusive o mapa: escolha os que não
+  mostram onde você mora. São guardados no servidor do MUSE (armazenamento da
+  Cloudflare), só os desenvolvedores os abrem, e são **apagados sozinhos em 3 meses**.
+- **Não vão** o seu nome, e-mail, conta, posição, placa, lugares salvos, veículos,
+  documentos nem rotinas. A tela mostra o que vai junto antes de enviar.
+- O app guarda no celular o número de cada relato e uma chave que só ele tem, para
+  ler e responder a conversa. Ela não vai para o backup do Android; se você usa a
+  conta Google no app, vai para a pasta escondida do seu Drive, para as conversas
+  aparecerem no celular novo.
+- Para apagar um relato, peça na própria conversa: os desenvolvedores apagam o
+  relato e os anexos.
+
+## Alagamentos ao vivo
+
+Nas cidades em que há boletim oficial de alagamentos (hoje, São Paulo, pelo
+CGE), o app pergunta ao servidor do MUSE quais pontos estão alagados, quando a
+rota ou o mapa na tela passam por essa cidade. O pedido leva **só a cidade**:
+nem a sua posição, nem a rota, nem quem você é. O servidor lê o boletim por conta
+própria e responde a mesma lista a todo mundo.
+
+## Android Auto
+
+Se você usar o MUSE na tela do carro, o app manda a ela, pelo Android Auto, o
+mapa, a rota e os avisos que mostra no celular. Essa conexão é entre o celular e
+o carro; o Android Auto segue a política do Google.
+
 ## Bluetooth
 
 O app envia ao painel da moto, por Bluetooth, os dados que o painel mostra: rota,
@@ -310,14 +336,19 @@ música. Essa conexão é direta entre o celular e o painel.
   Google.
 - A viagem ao vivo se apaga sozinha no fim da viagem; tocar em Parar apaga na
   hora, ou assim que a internet voltar. O link fixo se apaga ao desligá-lo ou trocá-lo.
-- No rolê em grupo, sair tira você do rolê na hora; o rolê inteiro se apaga
+- No grupo, sair tira você do grupo na hora; o grupo inteiro se apaga
   quando o líder o encerra ou o último membro sai.
+- Um relato se apaga pedindo na conversa dele; os anexos se apagam sozinhos em 3
+  meses. Desinstalar o app apaga a chave do celular; sem a conta Google, a conversa
+  deixa de aparecer no app.
 
 ## Mudanças nesta política
 
-Quando o app mudar o que faz com os dados, esta página é atualizada e a data no
-topo muda. Na próxima vez que você abrir o app, ele avisa que a política mudou
-e pede que você a aceite para continuar.
+Esta política e os [termos de uso](https://musenav.vercel.app/termos) ficam
+publicados em <https://musenav.vercel.app/privacidade> e
+<https://musenav.vercel.app/termos>. Quando o app mudar o que faz com os dados,
+esta página é atualizada e a data no topo muda. Na próxima vez que você abrir o
+app, ele avisa que a política mudou e pede que você a aceite para continuar.
 
 ## Contato
 
