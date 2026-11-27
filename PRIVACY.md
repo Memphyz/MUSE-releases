@@ -1,6 +1,6 @@
 # Política de privacidade do MUSE
 
-Última atualização: 23 de novembro de 2026
+Última atualização: 26 de novembro de 2026
 
 O MUSE é um aplicativo de navegação para motociclistas que conversa com um
 painel instalado na moto. É um projeto pessoal, sem fins comerciais. Esta página
@@ -13,6 +13,8 @@ explica que dados o app usa, onde eles ficam e com quem eles são trocados.
   recebe algo quando você compartilha uma viagem, entra num grupo ou envia um
   relato (veja abaixo). Da viagem e do grupo ele guarda apenas a última posição e
   apaga tudo quando acabam; o relato ele entrega aos desenvolvedores, e mais ninguém o vê.
+  Quando o app fecha sozinho, ele manda aos desenvolvedores o erro técnico, sem
+  dado pessoal (veja "Quando o app fecha sozinho").
   Ele também diz se há alagamento na cidade da sua rota; para isso o app manda
   só o nome da cidade, nunca a posição (veja "Alagamentos ao vivo").
 - Não há anúncios, rastreamento nem venda de dados. A única medição de uso é
@@ -303,6 +305,27 @@ enviar um relato.**
   aparecerem no celular novo.
 - Para apagar um relato, peça na própria conversa: os desenvolvedores apagam o
   relato e os anexos.
+
+## Quando o app fecha sozinho
+
+Quando o MUSE fecha sozinho por um erro (ou trava e o Android o fecha), ele manda
+aos desenvolvedores, **sem perguntar**, o que aconteceu, para que o erro seja
+corrigido mesmo quando você não consegue abrir o app para contar.
+
+- Vão: a versão do app, o modelo do celular, a versão do Android, de onde o app
+  foi instalado (a Google Play ou outro), a versão da Play Store, o nome da tela
+  em que o app estava, há quanto tempo ele estava aberto, quando fechou, o que o
+  Android disse sobre o fechamento e a lista das partes do código por onde o erro
+  passou.
+- **Não vão** o seu nome, e-mail, conta, posição, rota, lugares, veículos,
+  documentos, ajustes nem nada que você escreveu. A mensagem do erro é técnica,
+  mas em casos raros pode trazer um pedaço do que estava na tela (por exemplo, um
+  texto digitado que o app não conseguiu ler).
+- Vai pelo servidor do MUSE ao mesmo repositório **privado** dos relatos. O
+  servidor guarda só uma marca de cada tipo de erro (sem dado do celular) e quantas
+  vezes ele aconteceu, para juntar o mesmo erro de vários celulares num lugar só.
+- Até ser enviado, o relato fica no celular, fora do backup do Android, e se apaga
+  depois do envio. Só a versão publicada do app manda.
 
 ## Alagamentos ao vivo
 
